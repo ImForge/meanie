@@ -1,11 +1,25 @@
-# meanie
+# Meanie API
 
-A petty little API whose sole purpose in life is to insult you the moment you open it. Built with FastAPI, deployed on Render, free to roast anyone who clicks the link.
+A brutally honest insult API. Hit it and it will roast you with zero mercy.
 
-hes very mean btw :<
+### Warning
+**Extremely offensive.** This API contains heavy slurs, vulgar language, and highly toxic insults. Not for the sensitive, easily triggered, or professional environments. Use at your own risk.
+
+### What it does
+Every time you call the API, it returns one random raw insult.
+
+### Usage
+
+**GET /**  
+Returns a single insult in JSON format.
+
+**Example Response:**
+```json
+{
+  "insult": "nah i cant give u one just check it out"
+}
 
 ## Live demo
 
 https://meanie.onrender.com/
 
-Open it. Refresh it. Send it to your enemies. The first load may take ~30 seconds because the free tier sleeps when idle.

@@ -13,12 +13,6 @@ Every time you call the API, it returns one random raw insult.
 **GET /**  
 Returns a single insult in JSON format.
 
-**Example Response:**
-```json
-{
-  "insult": "nah i cant give u one just check it out"
-}
-
 ## Live demo
 
 https://meanie.onrender.com/

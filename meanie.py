@@ -5,348 +5,296 @@ import random
 app = FastAPI()
 
 insults = [
-   "you walk into conversations like a pop-up ad nobody asked for.",
-
-"you have the emotional depth of a loading screen.",
-
-"you're somehow loud and irrelevant at the same time.",
-
-"you look like you lose arguments to automatic doors.",
-
-"your existence feels like a software bug in reality.",
-
-"you bring the same energy as wet socks and traffic jams.",
-
-"you're the reason group projects have trust issues.",
-
-"you talk with so much confidence for someone consistently wrong.",
-
-"you could ruin a free vacation with your personality alone.",
-
-"you have the survival instincts of a moth near a flamethrower.",
-
-"you make awkward silence feel comforting.",
-
-"your self-awareness is on airplane mode permanently.",
-
-"you somehow make disappointment look athletic.",
-
-"you're built like a bad decision made at 2am.",
-
-"you look like you ask obvious questions in tutorials.",
-
-"your personality feels factory reset.",
-
-"you radiate 'forwarded without reading' energy.",
-
-"you'd lose a race against common sense.",
-
-"you have the social awareness of a shopping cart with one broken wheel.",
-
-"you make people check their phones mid-conversation out of survival instinct.",
-
-"you look like your favorite hobby is being confidently incorrect.",
-
-"your brain treats critical thinking like a subscription service.",
-
-"you're not mysterious. people just stop caring halfway through.",
-
-"you somehow make every room feel longer.",
-
-"you argue like facts personally offended you.",
-
-"your life decisions look randomly generated.",
-
-"you have the charisma of expired milk.",
-
-"you look like the type to clap when the plane lands.",
-
-"you're the human version of low battery anxiety.",
-
-"your face says 'i ask for the manager' without speaking.",
-
-"you carry yourself like a motivational quote written by someone unemployed.",
-
-"you look like your biggest achievement was surviving high school group chats.",
-
-"you have the vibe of someone who says 'trust me bro' before disaster happens.",
-
-"you make confidence look like a medical condition.",
-
-"you're what happens when overthinking and underperforming combine.",
-
-"you somehow make every joke feel like a hostage situation.",
-
-"you look like your phone storage is 90% screenshots you'll never use.",
-
-"your personality could be replaced by elevator music and nobody would notice.",
-
-"you give people secondhand embarrassment in real time.",
-
-"you look like you still type with one finger under pressure.",
-
-"your presence has the same effect as accidentally stepping in water with socks on.",
-
-"you treat basic responsibilities like optional side quests.",
-
-"you look like you start drama then act confused about consequences.",
-
-"your attention span loses fights against ceiling fans.",
-
-"you have the rare ability to make simple things exhausting.",
-
-"you look like you believe every fake quote on the internet.",
-
-"you somehow turned being average into a full-time personality.",
-
-"you make people regret asking 'how are you?'",
-
-"your confidence survives entirely because reality hasn't caught up yet.",
-
-"you look like you blame technology when you forget your own password."
-"you look like your thoughts need buffering.",
-
-"your personality has the nutritional value of cardboard.",
-
-"you somehow make confidence look embarrassing.",
-
-"you walk like your bones are arguing with each other.",
-
-"you bring chaos to things that already worked perfectly fine.",
-
-"you look like you lose staring contests to mirrors.",
-
-"your excuses deserve their own documentary series.",
-
-"you have the decision-making skills of a sleep-deprived raccoon.",
-
-"you radiate the energy of unfinished homework.",
-
-"you look like you still ask if the teacher collected assignments.",
-
-"your opinions feel AI-generated in the worst way possible.",
-
-"you somehow turn every conversation into community service.",
-
-"you look like you chew loudly in quiet rooms.",
-
-"your brain treats logic like a rumor.",
-
-"you have the vibe of someone who forwards fake news confidently.",
-
-"you look like your favorite phrase is 'wait what happened?'",
-
-"your face says 'i definitely clicked the suspicious link.'",
-
-"you move through life like a browser with 97 tabs open.",
-
-"you make bad timing look intentional.",
-
-"your personality feels sponsored by poor decisions.",
-
-"you look like you trip over invisible objects regularly.",
-
-"you have the emotional stability of a shopping cart downhill.",
-
-"you somehow make silence uncomfortable.",
-
-"you look like your alarm clock is your greatest enemy.",
-
-"you have the reaction speed of expired mayonnaise.",
-
-"your stories take longer than necessary and still go nowhere.",
-
-"you give off strong 'battery at 1%' energy.",
-
-"you look like your main talent is misunderstanding situations.",
-
-"your confidence is entirely unsupported by evidence.",
-
-"you somehow manage to disappoint expectations nobody even had.",
-
-"you look like your search history would explain everything.",
-
-"your personality could be replaced by a blinking cursor.",
-
-"you make basic tasks feel like boss fights.",
-
-"you look like someone who forgets why they entered a room every time.",
-
-"your social skills were clearly assembled without instructions.",
-
-"you argue with the confidence of someone who never fact-checks.",
-
-"you look like your favorite activity is standing in the way.",
-
-"you somehow make every situation slightly worse.",
-
-"your vibe screams 'unskippable ad.'",
-
-"you look like you breathe directly into microphones.",
-
-"you bring the same atmosphere as slow internet.",
-
-"you look like your hobbies include missing obvious hints.",
-
-"your logic deserves its own warning label.",
-
-"you somehow make being annoying look effortless.",
-
-"you look like you clap off-beat proudly.",
-
-"your personality feels aggressively average.",
-
-"you move through life like autocorrect gave up on you.",
-
-"you look like you think chain messages actually work.",
-
-"your entire presence feels like unnecessary paperwork.",
-
-"you somehow make simple instructions look impossible.",
-
-"you look like you still fall for obvious scams.",
-
-"your brain runs on trial-version common sense.",
-
-"you have the same energy as a cracked phone screen.",
-
-"you look like you ask questions during movies constantly.",
-
-"your attention span could lose to a spinning ceiling fan.",
-
-"you somehow make every joke sound accidental.",
-
-"you look like your biggest enemy is basic planning.",
-
-"your personality feels heavily recycled.",
-
-"you have the awareness of a traffic cone.",
-
-"you look like your ringtone is still the default one.",
-
-"you somehow make elevators awkward.",
-
-"your vibe says 'reply-all accident waiting to happen.'",
-
-"you look like your favorite app is the calculator.",
-
-"your social battery somehow drains everyone else's too.",
-
-"you make confusion look like a lifestyle choice.",
-
-"you look like your passwords are all variations of 'password123.'",
-
-"your brain treats consequences like optional DLC.",
-
-"you somehow make optimism regret itself.",
-
-"you look like you stand too close while talking.",
-
-"your personality has pop-up ad energy.",
-
-"you make every group chat weaker by existing in it.",
-
-"you look like your greatest achievement was finding the caps lock key.",
-
-"your logic feels like it was assembled during turbulence.",
-
-"you somehow lose arguments against yourself.",
-
-"you look like your thoughts arrive one business day late.",
-
-"your vibe is incredibly uninstallable.",
-
-"you make overexplaining feel like psychological warfare.",
-
-"you look like you say 'long story short' before talking for 40 minutes.",
-
-"your brain runs like a laptop at 2% battery.",
-
-"you somehow make waiting rooms more depressing.",
-
-"you look like you think every motivational quote is deep.",
-
-"your personality feels generated from random leftovers.",
-
-"you bring absolutely nothing to the table except volume.",
-
-"you look like your favorite hobby is misunderstanding sarcasm.",
-
-"your entire existence feels mildly inconvenient.",
-
-"you somehow turn confidence into a public safety issue.",
-
-"you look like your screen time report scares even you.",
-
-"your thoughts move like traffic during construction.",
-
-"you have the timing of a fire alarm at a wedding.",
-
-"you look like your best ideas happen accidentally.",
-
-"your vibe is one missed nap away from disaster.",
-
-"you somehow make incompetence look ambitious.",
-
-"you look like your life updates come with apology notes.",
-
-"your presence lowers the room's collective focus.",
-
-"you somehow make every plan harder than it needed to be.",
-
-"you look like your personality was copied from comment sections.",
-
-"your confidence-to-skill ratio needs government regulation.",
-
-"you bring the same joy as mandatory software updates.",
-
-"you look like your notifications are mostly ignored.",
-
-"your personality could be summarized as 'loading...'",
-
-"you somehow make every explanation sound less believable.",
-
-"you look like your main contribution is making people tired.",
-
-"your vibe screams 'accidentally muted in important meetings.'",
-
-"you have the strategic thinking of spilled soup.",
-
-"you somehow make indecision competitive.",
-
-"you look like your plans fail during the planning stage.",
-
-"your brain treats common sense like premium content.",
-
-"you look like your biggest talent is bad timing.",
-
-"your personality has buffering wheel energy.",
-
-"you somehow make eye contact feel aggressive.",
-
-"you look like your internal monologue is mostly confusion.",
-
-"your presence feels like a low-quality repost.",
-
-"you somehow turned awkwardness into cardio.",
-
-"you look like your favorite exercise is avoiding responsibility.",
-
-"your vibe is one typo away from complete collapse.",
-
-"you somehow make mediocrity look exhausting.",
-
-"you look like your opinions come from random internet polls.",
-
-"your personality is basically a delayed notification.",
-
-"you somehow make every room less productive.",
-
-"you look like your brain still uses internet explorer.",
-
-"your existence feels oddly downloadable.",
-
-"you somehow turned basic communication into a side quest."
+   "you fucking retarded nigger, go choke on your own stupidity.",
+"Pathetic limp-dicked paki bastard, crawl back into whatever shithole you came from.",
+"You braindead autistic tranny kike, nobody wants your worthless ass here.",
+"You disgusting spic faggot cunt, kill yourself you worthless fuck.",
+"You inbred redneck nigger lover, your bloodline is pure garbage.",
+"You fat dyke retard, even dogs refuse to fuck you.",
+"You slope-eyed chink faggot, go eat bats and die already.",
+"You filthy camel jockey sand nigger, fuck off to your desert.",
+"You limp-wristed jew faggot, your mother should’ve aborted you.",
+"You retarded mongoloid gook, you’re a waste of oxygen.",
+"You stupid cum-guzzling nigger bitch, choke on dick and die.",
+"You pathetic paki rapist, go fuck your sister you inbred fuck.",
+"You autistic tranny freak, cut deeper next time you cunt.",
+"You dirty spic wetback, drown in the river you crossed.",
+"You hillbilly nigger, your family tree is a straight line.",
+"You fat lesbian cunt, no one will ever love your disgusting body.",
+"You rice-eyed chink virus carrier, go back to eating dogs.",
+"You terrorist towelhead, blow yourself up already you dog.",
+"You hook-nosed kike bastard, steal another penny and die.",
+"You downie retard faggot, your parents regret not swallowing.",
+"You worthless nigger animal, go swing from a tree you ape.",
+"You limp-dicked paki groomer, touch kids somewhere else.",
+"You brainless tranny abomination, you’ll never be a woman.",
+"You greasy spic beaner, go pick fruit you subhuman.",
+"You inbred methhead redneck, your sister is your mother.",
+"You obese dyke whale, roll back to the sea you fat cunt.",
+"You squinty chink spy, go steal more tech you thief.",
+"You bomb-making towelhead, Allah is disappointed in your failure.",
+"You cheap jew rat, go gas yourself you greedy fuck.",
+"You retarded slope gook, your country is a sweatshop.",
+"You AIDS-ridden nigger monkey, go spread it somewhere else.",
+"You sister-fucking paki goat, your whole family is cursed.",
+"You mutilated tranny mistake, kill yourself you freak.",
+"You border-hopping spic, get deported you parasite.",
+"You cousin-fucking redneck, your IQ is room temperature.",
+"You carpet-munching dyke, your pussy smells like death.",
+"You bat-eating chink, release the next virus you lab rat.",
+"You suicide vest wearing sand nigger, do it properly this time.",
+"You penny-pinching kike, your nose is bigger than your dick.",
+"You helmet-wearing retard, your parents wish you were dead.",
+"You jungle bunny nigger, go back to the zoo.",
+"You child-marrying paki, your religion is pure filth.",
+"You chopped-dick tranny, you’re still just a man in a dress.",
+"You taco-eating wetback spic, learn to speak English you dog.",
+"You trailer trash redneck, fuck your sister again.",
+"You man-hating fat dyke, no one wants your hairy cunt.",
+"You dog-eating chink, your eyes are as small as your brain.",
+"You desert rat towelhead, go fuck a camel.",
+"You holocaust-denying kike, you deserve the real one.",
+"You window-licking mongoloid, drool on your own grave.",
+"You nigger loving faggot, your dad is ashamed of you.",
+"You paki wife beater, go beat your cousin instead.",
+"You fake tranny whore, nobody is buying your delusion.",
+"You spic gangbanger, get shot by your own kind.",
+"You redneck sister fucker, your kids have birth defects.",
+"You bulldyke cunt, your clit is bigger than your brain.",
+"You chink bat soup slurper, go die in a wet market.",
+"You towelhead terrorist, your bomb failed again.",
+"You greedy hooknose kike, count your shekels in hell.",
+"You retarded down syndrome faggot, lick the windows harder.",
+"You jungle nigger savage, go back to mud huts.",
+"You goat fucking paki, your wife is your sister.",
+"You dickless tranny, kill yourself you confused cunt.",
+"You beaner wetback spic, swim back you illegal fuck.",
+"You meth smoking redneck, your teeth are falling out.",
+"You hairy armpit dyke, no man will ever touch you.",
+"You squinty eyed chink, your dick is as small as your eyes.",
+"You sand nigger camel fucker, blow up your own family.",
+"You cheap jew bastard, your gold is fake just like you.",
+"You helmet head retard, drool more you fucking spastic.",
+"You AIDS spreading nigger, infect your whole hood.",
+"You child raping paki, your prophet would be proud.",
+"You mutilated tranny freak, you’ll never pass.",
+"You border jumping spic, steal more jobs you rat.",
+"You cousin fucking redneck, your family is disgusting.",
+"You fat lesbian whale, go eat another pussy.",
+"You dog meat eating chink, your country is a virus factory.",
+"You bomb vest towelhead, try harder next time.",
+"You greedy kike rat, Auschwitz missed you.",
+"You window licking mong, your life is a mistake.",
+"You ape nigger, go eat bananas you primate.",
+"You inbred paki fuck, your blood is rotten.",
+"You fake woman tranny, cut your dick off properly.",
+"You taco nigger spic, go back to Mexico you thief.",
+"You trailer park redneck, fuck your mom again.",
+"You man hating dyke, your pussy is rotten.",
+"You virus making chink, Wuhan thanks you.",
+"You desert monkey sand nigger, go pray to your rock.",
+"You penny stealing jew, your nose reaches your wallet.",
+"You braindead retard, your parents should have pulled out.",
+"You cotton picking nigger, go pick my balls.",
+"You goat herder paki, marry your daughter.",
+"You chopped cock tranny, you’re a mental illness.",
+"You fence hopping spic, get shot at the border.",
+"You sister impregnating redneck, your kids are retarded.",
+"You carpet licker dyke, your breath smells like fish.",
+"You rice nigger chink, go cough on more people.",
+"You suicide bomber towelhead, do the world a favor.",
+"You holocaust survivor kike, next time finish the job.",
+"You spastic retard, lick the bus windows.",
+"You spear throwing nigger, go back to Africa.",
+"You cousin bride paki, your genes are fucked.",
+"You estrogen filled tranny, you still look like a man.",
+"You burrito spic, learn English you dirty fuck.",
+"You banjo playing redneck, your sister is pregnant again.",
+"You bull dyke cunt, shave your mustache.",
+"You bat soup chink, your mother eats rats.",
+"You raghead sand nigger, your Allah hates you.",
+"You shekel counting jew, go die in Israel.",
+"You helmet wearing mongoloid, your brain never grew.",
+"You porch monkey nigger, go steal more bikes.",
+"You sister fucking paki, your family tree is a circle.",
+"You fake tits tranny, nobody wants your fake pussy.",
+"You wetback spic, drown next time.",
+"You meth head redneck, your teeth are black.",
+"You rug munching dyke, your fingers smell like tuna.",
+"You corona spreading chink, your lab leaked again.",
+"You camel humper towelhead, fuck your goat.",
+"You greedy kike, your foreskin is in a jar.",
+"You downie faggot, your mom cries every night.",
+"You nigger ape, swing from trees you animal.",
+"You bomb making paki, your bomb was fake like you.",
+"You dick cutting tranny, bleed out you freak.",
+"You bean eating spic, go pick tomatoes.",
+"You hillbilly redneck, your mom is also your aunt.",
+"You fat bulldyke, your cunt has teeth.",
+"You eye squinting chink, go steal more secrets.",
+"You desert nigger sand monkey, blow yourself up.",
+"You cheap jew fuck, your gold teeth are fake.",
+"You retarded spastic, your wheelchair is waiting.",
+"You cotton field nigger, go shine my shoes.",
+"You child bride paki, your prophet is a pedo.",
+"You ball chopping tranny, you’re still a dude.",
+"You fence climbing spic, get deported you leech.",
+"You cousin fucking redneck, your IQ is 50.",
+"You pussy licking dyke, your breath is deadly.",
+"You dog eating chink, your dick is tiny.",
+"You towel head terrorist, your virgins are waiting in hell.",
+"You nose hook kike, count money in hell.",
+"You brainless retard, your life is pointless.",
+"You spear chucking nigger, go back to the jungle.",
+"You goat fucking paki, marry your goat.",
+"You fake ass tranny, you’ll never be real.",
+"You rice stealing spic, go back south of the border.",
+"You trailer nigger redneck, fuck your cousin.",
+"You man faced dyke, no one wants you.",
+"You virus lab chink, Wuhan is proud.",
+"You sand rat towelhead, your bomb failed again.",
+"You shekel hoarder jew, gas chamber is calling.",
+"You window licker retard, drool more.",
+"You porch monkey nigger, steal another bike.",
+"You inbred paki, your kids have extra fingers.",
+"You hormone tranny, your voice is still deep.",
+"You taco spic, learn to speak properly.",
+"You sister fucker redneck, your family is cursed.",
+"You hairy dyke, your armpits smell like shit.",
+"You bat eater chink, release another plague.",
+"You camel fucker sand nigger, your desert is shit.",
+"You greedy jew rat, your bank is fake.",
+"You helmet head mong, your brain is smooth.",
+"You nigger coon, go pick cotton.",
+"You child rapist paki, your religion is sick.",
+"You dickless tranny cunt, kill yourself.",
+"You illegal spic, swim back you rat.",
+"You meth redneck, your teeth fell out.",
+"You lesbian whale, go eat more carpet.",
+"You squinty chink, your brain is small.",
+"You raghead, blow up your mosque.",
+"You hooknose kike, your money is blood money.",
+"You spastic retard, your parents hate you.",
+"You ape nigger, go back to zoo.",
+"You goat paki, fuck your animals.",
+"You confused tranny, cut deeper.",
+"You beaner spic, pick fruit you dog.",
+"You banjo redneck, impregnate your sister.",
+"You bull dyke, your clit is huge.",
+"You dog meat chink, your eyes are slits.",
+"You suicide sand nigger, try harder.",
+"You cheap jew, die in oven.",
+"You downie, your life is joke.",
+"You jungle nigger, mud hut awaits.",
+"You cousin paki, your blood is bad.",
+"You fake woman tranny, man in dress.",
+"You wet spic, drown you fuck.",
+"You trailer redneck, fuck mom.",
+"You fat dyke, hairy cunt.",
+"You corona chink, lab leak.",
+"You desert towelhead, camel fucker.",
+"You shekel kike, greedy rat.",
+"You retard mong, drool.",
+"You cotton nigger, shine shoes.",
+"You pedo paki, child bride.",
+"You chopped tranny, bleed out.",
+"You border spic, deported.",
+"You inbred redneck, sister mom.",
+"You carpet dyke, fish smell.",
+"You rice chink, tiny dick.",
+"You bomb towelhead, fail again.",
+"You holocaust kike, missed you.",
+"You licker retard, bus windows.",
+"You savage nigger, jungle back.",
+"You goat paki, marry daughter.",
+"You estrogen tranny, still man.",
+"You burrito spic, English dog.",
+"You meth redneck, black teeth.",
+"You armpit dyke, no man.",
+"You virus chink, cough more.",
+"You humper towelhead, goat fuck.",
+"You jew rat, foreskin jar.",
+"You spastic, wheelchair.",
+"You monkey nigger, bananas.",
+"You bride paki, genes fucked.",
+"You tits tranny, fake pussy.",
+"You fence spic, shot border.",
+"You cousin redneck, IQ low.",
+"You licker dyke, tuna breath.",
+"You soup chink, rats.",
+"You vest sand nigger, virgins hell.",
+"You counting jew, hell money.",
+"You licking retard, pointless life.",
+"You chucking nigger, Africa.",
+"You herder paki, goat wife.",
+"You cock tranny, mental illness.",
+"You jumping spic, leech.",
+"You fucking redneck, 50 IQ.",
+"You munching dyke, deadly breath.",
+"You eating chink, tiny dick.",
+"You head towelhead, virgins hell.",
+"You kike, gas chamber.",
+"You retard, parents hate.",
+"You nigger, zoo.",
+"You paki, extra fingers.",
+"You tranny, deep voice.",
+"You spic, speak properly.",
+"You redneck, cursed family.",
+"You dyke, shit armpits.",
+"You chink, another plague.",
+"You nigger, shit desert.",
+"You jew, blood money.",
+"You mong, smooth brain.",
+"You nigger, pick cotton.",
+"You paki, sick religion.",
+"You tranny, kill self.",
+"You spic, rat swim.",
+"You redneck, teeth out.",
+"You dyke, eat carpet.",
+"You chink, small brain.",
+"You towelhead, mosque blow.",
+"You kike, blood money.",
+"You retard, joke life.",
+"You nigger, hut mud.",
+"You paki, bad blood.",
+"You tranny, dress man.",
+"You spic, fuck dog.",
+"You redneck, mom sister.",
+"You dyke, cunt hairy.",
+"You chink, leak lab.",
+"You sand nigger, fuck camel.",
+"You jew, rat greedy.",
+"You retard, drool more.",
+"You nigger, shoes shine.",
+"You paki, bride child.",
+"You tranny, out bleed.",
+"You spic, rat you.",
+"You redneck, low IQ.",
+"You dyke, smell fish.",
+"You chink, dick tiny.",
+"You towelhead, fail bomb.",
+"You kike, oven die.",
+"You retard, joke you.",
+"You nigger, back jungle.",
+"You paki, daughter marry.",
+"You tranny, man still.",
+"You spic, dog English.",
+"You redneck, out teeth.",
+"You dyke, man no.",
+"You chink, more cough.",
+"You towelhead, fuck goat.",
+"You jew, jar foreskin.",
+"You retard, hate parents.",
+"You nigger, bananas eat.",
+"You paki, fucked genes.",
+"You tranny, pussy fake.",
+"You spic, border shot.",
+"You redneck, low IQ.",
+"You dyke, breath deadly.",
+"You chink, rats eat.",
+"You sand nigger, hell virgins.",
+"You jew, money hell.",
+"You retard, life pointless.",
 
 ]
 

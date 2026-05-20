@@ -2,6 +2,8 @@
 
 A petty little API whose sole purpose in life is to insult you the moment you open it. Built with FastAPI, deployed on Render, free to roast anyone who clicks the link.
 
+hes very mean btw :<
+
 ## Live demo
 
 https://meanie.onrender.com/

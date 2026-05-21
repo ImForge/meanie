@@ -1,17 +1,13 @@
 # Meanie API
 
-A brutally honest insult API. Hit it and it will roast you with zero mercy.
+A savage roast API that insults you on demand.
 
-### Warning
-**Extremely offensive.** This API contains heavy slurs, vulgar language, and highly toxic insults. Not for the sensitive, easily triggered, or professional environments. Use at your own risk.
+### ⚠️ Warning
+This API is **edgy and mean**. It delivers rude, cocky, and insulting roasts. While it no longer uses slurs or extreme hate speech, it is still very toxic and not suitable for sensitive people.
 
 ### What it does
-Every time you call the API, it returns one random raw insult.
+Every request returns one random brutal insult.
 
-### Usage
-
-**GET /**  
-Returns a single insult in JSON format.
 
 ## Live demo
 

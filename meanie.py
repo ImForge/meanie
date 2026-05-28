@@ -18,6 +18,7 @@ insults =[
   "You spineless jellyfish, grow a backbone you weakling.",
   "You annoying little gremlin, go touch some sunlight.",
   "You certified dumbass, your brain is permanently on airplane mode.",
+  "u aint tuff buddy",
   "You irrelevant nobody, the void is more interesting than you.",
   "You cringy attention whore, log off and touch grass.",
   "You walking disappointment, your parents regret you the most.",
